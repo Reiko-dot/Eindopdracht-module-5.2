@@ -11,54 +11,7 @@
 
 <body>
 
-    <header>
-        <section class="container-header">
-
-            <section class="header-left">
-                <div class="logo-section-left">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/pompompurin.png" alt="Logo" class="header-logo-purin">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/tuxedosam.png" alt="Logo" class="header-logo-tuxedosam">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/badtzmaru.png" alt="Logo" class="header-logo-badtzmaru">
-
-                </div>
-            </section>
-
-
-            <section class="header-middle">
-                <div class="header-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/Sanrio-logo.png" alt="Logo" class="header-logo">
-
-                </div>
-
-                <nav class="header-nav">
-                    <ul>
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Characters</a>
-                        <a href="#">Rankings</a>
-                    </ul>
-                </nav>
-            </section>
-
-
-
-            <section class="header-right">
-                <div class="logo-section-right">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/pochacco-ya.png" alt="Logo" class="header-logo-pochacco">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/cinnamon.png" alt="Logo" class="header-logo-cinnamon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/chococat.png" alt="Logo" class="header-logo-chococat">
-
-                </div>
-            </section>
-
-
-        </section>
-
-        <div class="main-front-poster">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/sanrio poster.png" alt="sanrio" class="header-sanrio-poster">
-        </div>
-
-    </header>
+    <?php get_header(); ?>
 
     <main>
 
@@ -71,17 +24,73 @@
         </section>
 
         <section class="sanrio-profiles">
-              <h2>Sanrio Profiles</h2>
+            <h2>Sanrio Characters</h2>
 
             <div class="profiles">
 
+                <div class="profile-card-1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/hellokitty.png" alt="Logo" class="character-images">
+
+                </div>
+
+
+                <div class="profile-card-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/mymelody.png" alt="Logo" class="character-images">
+
+                </div>
+                <div class="profile-card-3">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/cinnamon.png" alt="Logo" class="character-images">
+                </div>
+                <div class="profile-card-4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/tuxedosam.png" alt="Logo" class="character-images">
+                </div>
+
+                <div class="profile-card-5">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/badtzmaru.png" alt="Logo" class="character-images">
+                </div>
+                <div class="profile-card-6">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/pompompurin.png" alt="Logo" class="character-images">
+                </div>
+                <div class="profile-card-7">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/chococat.png" alt="Logo" class="character-images">
+                </div>
+                <div class="profile-card-8">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/pochacco-ya.png" alt="Logo" class="character-images">
+                </div>
 
             </div>
 
-          
-
-            
         </section>
+
+        <section class="rankings-section">
+            <h2>Top 3 Rankings</h2>
+
+            <div class="rankings-container">
+                <div class="ranking-card-1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/cinnamonrank2.png" alt="Logo" class="cinnamon-rank2">
+                    
+                </div>
+
+                <div class="ranking-card-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/purinrank.png" alt="Logo" class="purin-rank1">
+                   
+                </div>
+
+                <div class="ranking-card-3">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/pochaccorank3.png" alt="Logo" class="pochacco-rank3">
+                   
+                </div>
+
+
+                
+            </div>
+
+
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Sanrio Website. All rights reserved.</p>
+        </footer>
 
 
 
