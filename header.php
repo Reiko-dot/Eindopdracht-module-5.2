@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <?php wp_head(); ?>
+</head>
+
+
+
+
 <header>
     <section class="container-header">
 
@@ -13,21 +25,16 @@
 
         <section class="header-middle">
             <div class="header-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/Sanrio-logo.png" alt="Logo" class="header-logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/sanrio-logo.png" alt="Logo" class="header-logo-sanrio">
+
+
 
             </div>
 
             <nav class="header-nav">
-                <ul>
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Characters</a>
-                    <a href="#">Rankings</a>
-                </ul>
-            </nav>
-            <nav>
                 <?php wp_nav_menu(array('theme_location' => 'hoofdmenu')); ?>
             </nav>
+           
 
 
         </section>
@@ -46,8 +53,5 @@
 
     </section>
 
-    <div class="main-front-poster">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/sanrio poster.png" alt="sanrio" class="header-sanrio-poster">
-    </div>
-
+    
 </header>

@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sanrio website</title>
-    <link rel="stylesheet" href="<?php
-                                    bloginfo('stylesheet_url'); ?>" />
-</head>
 
 <body>
 
     <?php get_header(); ?>
 
+    <div class="main-front-poster">
+        <?php
+        $home_image = get_field('home-image');
+        if ($home_image) {
+            echo '<img src="' . $home_image['url'] . '" alt="' . $home_image['alt'] . '">';
+        }
+        ?>
+
+    </div>
+
+
     <main>
 
         <section class="about-sanrio">
-            <h2>About Sanrio</h2>
-            <div class="about-textbox">
-                <p>Sanrio is a Japanese company best known for creating cute,<br> friendly characters and turning them into a global cultural phenomenon.<br> Founded in 1960 by Shintaro Tsuji, the company originally sold silk products <br>before shifting its focus to character goods.<br>
-                    Sanrio’s most iconic creation is Hello Kitty, introduced in 1974. <br>She quickly became a worldwide symbol of “kawaii” (cute) culture. <br>Since then, Sanrio has created many other beloved characters, including My Melody, <br>Cinnamoroll, Kuromi, Pompompurin, and Badtz-Maru.</p>
-            </div>
+            <?php
+            if (have_posts()) {
+                while (have_posts()) {
+                    the_post();
+                    the_content();
+                }
+            }
+            ?>
+
         </section>
 
         <section class="sanrio-profiles">
@@ -29,33 +35,74 @@
             <div class="profiles">
 
                 <div class="profile-card-1">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/hellokitty.png" alt="Logo" class="character-images">
+                    <?php
+                    $character_kitty = get_field('character-kitty');
+                    if ($character_kitty) {
+                        echo '<img src="' . $character_kitty['url'] . '" alt="' . $character_kitty['alt'] . '">';
+                    }
+                    ?>
 
                 </div>
 
 
                 <div class="profile-card-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/mymelody.png" alt="Logo" class="character-images">
+                    <?php
+                    $character_melody = get_field('character-melody');
+                    if ($character_melody) {
+                        echo '<img src="' . $character_melody['url'] . '" alt="' . $character_melody['alt'] . '">';
+                    }
+                    ?>
 
                 </div>
                 <div class="profile-card-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/cinnamon.png" alt="Logo" class="character-images">
+                    <?php
+                    $character_cinnamon = get_field('character-cinnamon');
+                    if ($character_cinnamon) {
+                        echo '<img src="' . $character_cinnamon['url'] . '" alt="' . $character_cinnamon['alt'] . '">';
+                    }
+                    ?>
+
                 </div>
                 <div class="profile-card-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/tuxedosam.png" alt="Logo" class="character-images">
+                    <?php
+                    $character_tuxedosam = get_field('character-tuxedosam');
+                    if ($character_tuxedosam) {
+                        echo '<img src="' . $character_tuxedosam['url'] . '" alt="' . $character_tuxedosam['alt'] . '">';
+                    }
+                    ?>
                 </div>
 
                 <div class="profile-card-5">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/badtzmaru.png" alt="Logo" class="character-images">
+                    <?php
+                    $character_badtzmaru = get_field('character-badtzmaru');
+                    if ($character_badtzmaru) {
+                        echo '<img src="' . $character_badtzmaru['url'] . '" alt="' . $character_badtzmaru['alt'] . '">';
+                    }
+                    ?>
                 </div>
                 <div class="profile-card-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/pompompurin.png" alt="Logo" class="character-images">
+                    <?php
+                    $character_pompompurin = get_field('character-pompompurin');
+                    if ($character_pompompurin) {
+                        echo '<img src="' . $character_pompompurin['url'] . '" alt="' . $character_pompompurin['alt'] . '">';
+                    }
+                    ?>
                 </div>
                 <div class="profile-card-7">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/chococat.png" alt="Logo" class="character-images">
+                    <?php
+                    $character_chococat = get_field('character-chococat');
+                    if ($character_chococat) {
+                        echo '<img src="' . $character_chococat['url'] . '" alt="' . $character_chococat['alt'] . '">';
+                    }
+                    ?>
                 </div>
                 <div class="profile-card-8">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/pochacco-ya.png" alt="Logo" class="character-images">
+                    <?php
+                    $character_pochacco = get_field('character-pochacco');
+                    if ($character_pochacco) {
+                        echo '<img src="' . $character_pochacco['url'] . '" alt="' . $character_pochacco['alt'] . '">';
+                    }
+                    ?>
                 </div>
 
             </div>
@@ -68,27 +115,27 @@
             <div class="rankings-container">
                 <div class="ranking-card-1">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/cinnamonrank2.png" alt="Logo" class="cinnamon-rank2">
-                    
+
                 </div>
 
                 <div class="ranking-card-2">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/purinrank.png" alt="Logo" class="purin-rank1">
-                   
+
                 </div>
 
                 <div class="ranking-card-3">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/pochaccorank3.png" alt="Logo" class="pochacco-rank3">
-                   
+
                 </div>
 
 
-                
+
             </div>
 
 
         </section>
 
-           <?php get_footer(); ?>
+        <?php get_footer(); ?>
 
 
 
@@ -96,10 +143,7 @@
 
     </main>
 
-    <footer>
-
-
-    </footer>
+    
 
 
 

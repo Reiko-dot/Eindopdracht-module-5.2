@@ -7,12 +7,35 @@ Description: Een zelfgemaakt WordPress thema.
 Version: 1.0
 */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+/* Reset default spacing and scrollbars */
+html, body {
+    margin: 0 !important; 
     padding: 0;
+
 }
 
+
+
+body > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Remove admin bar if logged in */
+html.wp-admin-bar #wpadminbar {
+    display: none;
+}
+
+/* Header */
 .container-header {
     display: flex;
     flex-direction: row;
@@ -22,80 +45,84 @@ body {
     padding: 20px;
     width: auto;
     height: 100px;
+    margin-top: 0;
 }
 
 .header-logo {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    img {
-        height: 60px;
-        align-self: center;
-    }
+.header-logo img {
+    height: 60px;
+    align-self: center;
 }
 
 .header-nav {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
+}
 
-    a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        padding: 15px 30px;
-    }
+.header-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px 30px;
+}
 
-    a:hover {
-        background-color: #ffb6c1;
-        color: white;
-        border-radius: 5px;
-    }
+.header-nav a:hover {
+    background-color: #ffb6c1;
+    color: white;
+    border-radius: 5px;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .header-left,
 .header-right {
     display: flex;
-
-
-
 }
 
 .logo-section-left {
-    width: 450px;
+    display: flex;
     flex-direction: row;
+    width: 450px;
+}
 
-    img {
-        height: 85px;
-        margin-left: 45px;
-    }
+.logo-section-left img {
+    height: 85px;
+    margin-left: 45px;
 }
 
 .logo-section-right {
     display: flex;
     flex-direction: row;
     width: 450px;
-
-
-    img {
-        height: 90px;
-        margin-left: 50px;
-    }
 }
 
+.logo-section-right img {
+    height: 90px;
+    margin-left: 50px;
+}
+
+/* Main poster */
 .main-front-poster {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(184, 253, 255) 55%);
-
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(184, 253, 255, 1) 55%);
     width: 100%;
     height: 589px;
-
-
 }
 
 .main-front-poster img {
@@ -103,27 +130,23 @@ body {
     height: 589px;
     object-fit: contain;
     margin-left: 25px;
+    display: block;
 }
 
-
+/* About section */
 .about-sanrio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: RGB(255, 244, 246);
     background: linear-gradient(0deg, rgba(255, 244, 246, 1) 0%, rgba(184, 253, 255, 1) 36%);
     padding: 50px 20px;
     color: rgb(45, 113, 186);
     text-align: center;
     font-size: 18px;
     height: 500px;
-
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
+/* Profiles */
 .sanrio-profiles {
     display: flex;
     flex-direction: column;
@@ -131,7 +154,6 @@ body {
     align-items: center;
     background-color: rgb(255, 244, 246);
     width: 100%;
-    height: auto;
 }
 
 .profiles {
@@ -139,11 +161,10 @@ body {
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 99.5%;
     height: 650px;
     background-color: rgb(255, 244, 246);
     border-radius: 40px 40px 0 0;
-    border: solid 5px rgb(58, 78, 134);
 }
 
 .profile-card-1,
@@ -155,15 +176,14 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(245, 186, 197);
-    border: solid 5px rgb(59, 82, 148);
     border-radius: 30px;
+    border: solid 5px rgb(92, 101, 162);
     margin: 20px;
     padding: 20px;
     width: 200px;
     height: 200px;
     margin-left: 65px;
 }
-
 
 
 
@@ -177,7 +197,7 @@ body {
     align-items: center;
     background-color: rgb(245, 186, 197);
     border-radius: 30px;
-    border: solid 5px rgb(59, 82, 148);
+    border: solid 5px rgb(92, 101, 162);
     margin: 20px;
     padding: 20px;
     width: 200px;
@@ -192,6 +212,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* Rankings */
 .rankings-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -199,14 +220,11 @@ body {
     align-items: center;
 }
 
-
-
 .rankings-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #fff4ed;
-    background: linear-gradient(0deg, rgb(255, 244, 237) 63%, rgb(245, 186, 197) 100%);
+    background: linear-gradient(180deg, rgb(255, 244, 246) 63%, rgb(255, 172, 232) 100%);
     padding: 50px 20px;
     color: rgb(45, 113, 186);
     text-align: center;
@@ -227,6 +245,7 @@ body {
     height: 350px;
 }
 
+/* Footer */
 footer {
     display: flex;
     justify-content: center;
@@ -237,4 +256,132 @@ footer {
     height: 50px;
     font-size: 12px;
 }
+
+/* Ensure images don’t create extra spacing */
+img {
+    display: block;
+}
+
+
+
+.what-is-sanrio {
+    display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 700px;
+  margin: 0 auto; 
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 20px;
+    
+}
+
+.what-is-sanrio img {
+    align-items: center;
+    width: 400px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.what-is-sanrio p {
+    margin: 0;
+    color: rgb(45, 113, 186);
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+.sanrio-characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+/* Character grid */
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center   ;
+  gap: 10px;
+  padding: 20px 20px;
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center; /* center each card */
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto; /* center the whole grid */
+}
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 220px;
+}
+
+.character-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.character-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal background (hidden by default) */
+.character-modal {
+  display: none; /* hidden initially */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The content box */
+.character-modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeInUp 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 
