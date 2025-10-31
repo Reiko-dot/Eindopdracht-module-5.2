@@ -26,7 +26,6 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
@@ -55,7 +54,6 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
@@ -85,7 +83,6 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
@@ -114,7 +111,6 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
@@ -157,7 +153,7 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
+      
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
@@ -186,7 +182,7 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
+      
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
@@ -215,7 +211,7 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
+      
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
@@ -243,7 +239,7 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
+      
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
@@ -278,7 +274,7 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
+      
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
@@ -307,7 +303,7 @@ get_header();
         ?>
       </div>
 
-      <!-- Modal (hidden initially) -->
+      
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
