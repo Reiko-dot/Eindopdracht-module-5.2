@@ -1,5 +1,3 @@
-
-
 <body>
 
     <?php get_header(); ?>
@@ -110,30 +108,23 @@
         </section>
 
         <section class="rankings-section">
-            <h2>Top 3 Rankings</h2>
+    <h2>Top 3 Rankings</h2>
 
-            <div class="rankings-container">
-                <div class="ranking-card-1">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/cinnamonrank2.png" alt="Logo" class="cinnamon-rank2">
+    <div class="rankings-container">
+        <div class="ranking-card-1">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/cinnamonrank2.png" alt="Cinnamon Roll" class="ranking-img cinnamon">
+        </div>
 
-                </div>
+        <div class="ranking-card-1">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/purinrank.png" alt="Purin" class="ranking-img purin">
+        </div>
 
-                <div class="ranking-card-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/purinrank.png" alt="Logo" class="purin-rank1">
+        <div class="ranking-card-1">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/pochaccorank3.png" alt="Pochacco" class="ranking-img pochacco">
+        </div>
+    </div>
+</section>
 
-                </div>
-
-                <div class="ranking-card-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/pochaccorank3.png" alt="Logo" class="pochacco-rank3">
-
-                </div>
-
-
-
-            </div>
-
-
-        </section>
 
         <?php get_footer(); ?>
 
@@ -143,7 +134,7 @@
 
     </main>
 
-    
+
 
 
 

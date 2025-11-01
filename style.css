@@ -31,7 +31,7 @@ body {
     display: none;
 }
 
-/* Remove admin bar if logged in */
+
 html.wp-admin-bar #wpadminbar {
     display: none;
 }
@@ -42,7 +42,7 @@ html.wp-admin-bar #wpadminbar {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #b6eeff;
+    background-color: #80c7fd;
     padding: 20px;
     width: auto;
     height: 100px;
@@ -121,7 +121,7 @@ html.wp-admin-bar #wpadminbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(184, 253, 255, 1) 55%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(114, 218, 244) 55%);
     width: 100%;
     height: 589px;
 }
@@ -139,12 +139,12 @@ html.wp-admin-bar #wpadminbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(0deg, rgba(255, 244, 246, 1) 0%, rgba(184, 253, 255, 1) 36%);
+    background: linear-gradient(0deg, rgba(255, 244, 246, 1) 0%, rgb(114, 218, 244) 30%);
     padding: 50px 20px;
     color: rgb(45, 113, 186);
     text-align: center;
     font-size: 18px;
-    height: 500px;
+    height: 650px;
 }
 
 /* Profiles */
@@ -153,112 +153,202 @@ html.wp-admin-bar #wpadminbar {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 244, 246);
+    background: linear-gradient(to bottom right, #fff6f8, #ffeef3);
     width: 100%;
+    padding: 60px 0;
+    
+    
+}
+
+.sanrio-profiles h2 {
+    font-family: 'Fredoka One', 'Baloo 2', cursive;
+    font-size: 2.5rem;
+    color: #ff869e;
+    text-shadow: 2px 2px 0 #fff;
+    margin-bottom: 40px;
 }
 
 .profiles {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    align-items: center;
-    width: 99.5%;
-    height: 650px;
-    background-color: rgb(255, 244, 246);
-    border-radius: 40px 40px 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    width: 90%;
+    max-width: 1000px;
 }
 
 .profile-card-1,
 .profile-card-2,
 .profile-card-3,
-.profile-card-4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(245, 186, 197);
-    border-radius: 30px;
-    border: solid 5px rgb(92, 101, 162);
-    margin: 20px;
-    padding: 20px;
-    width: 200px;
-    height: 200px;
-    margin-left: 65px;
-}
-
-
-
+.profile-card-4,
 .profile-card-5,
 .profile-card-6,
 .profile-card-7,
 .profile-card-8 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(245, 186, 197);
-    border-radius: 30px;
-    border: solid 5px rgb(92, 101, 162);
-    margin: 20px;
-    padding: 20px;
+    background-color: #f9c6d1;
+    border: 4px solid #6373c2;
+    border-radius: 25px;
     width: 200px;
     height: 200px;
-    margin-left: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.character-images {
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.profile-card-1:hover,
+.profile-card-2:hover,
+.profile-card-3:hover,
+.profile-card-4:hover,
+.profile-card-5:hover,
+.profile-card-6:hover,
+.profile-card-7:hover,
+.profile-card-8:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 150, 180, 0.4);
+    background-color: #ffd6e0;
 }
+
+.profile-card-1 img,
+.profile-card-2 img,
+.profile-card-3 img,
+.profile-card-4 img,
+.profile-card-5 img,
+.profile-card-6 img,
+.profile-card-7 img,
+.profile-card-8 img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.profile-card-1:hover img,
+.profile-card-2:hover img,
+.profile-card-3:hover img,
+.profile-card-4:hover img,
+.profile-card-5:hover img,
+.profile-card-6:hover img,
+.profile-card-7:hover img,
+.profile-card-8:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
 
 /* Rankings */
+/* General Layout */
 .rankings-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    align-items: center;
+    gap: 40px;
+    padding: 40px;
 }
 
 .rankings-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(180deg, rgb(255, 244, 246) 63%, rgb(255, 172, 232) 100%);
-    padding: 50px 20px;
-    color: rgb(45, 113, 186);
+    background: linear-gradient(180deg, #ffeef3 0%, #f67fc8 100%);
+    padding: 40px 30px;
+    color: #2d71ba;
     text-align: center;
-    font-size: 18px;
-    height: 500px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    min-height: 100vh;
 }
 
-.purin-rank1,
-.cinnamon-rank2,
-.pochacco-rank3 {
+
+.ranking-card-1 {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    padding: 20px;
-    width: 350px;
-    height: 350px;
+    position: relative;
+    width: 250px;
+    height: 300px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.ranking-card-1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ranking-card-1:hover .ranking-img {
+    transform: scale(1.1);
+}
+
+.cinnamon {
+    border: 6px solid #ffb3cc;
+    padding: 10px;
+    background-color: #f0e0f6;
+    border-radius: 50%;
+}
+
+.purin {
+    border: 6px solid #ffcc99;
+    padding: 10px;
+    background-color: #fff4e6;
+    border-radius: 50%;
+}
+
+.pochacco {
+    border: 6px solid #99d2ff;
+    padding: 10px;
+    background-color: #e6f7ff;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .rankings-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .rankings-container {
+        grid-template-columns: 1fr;
+    }
+
+    .ranking-card-1 {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+
+
 
 /* Footer */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #b6eeff;
+    background-color: #80c7fd;
+    color: #fff;
+    text-align: center;
     padding: 20px;
-    width: auto;
-    height: 50px;
-    font-size: 12px;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Ensure images don’t create extra spacing */
+
+
 img {
     display: block;
 }
@@ -389,6 +479,9 @@ img {
 }
 
 
+
+
+
 .sanrio-rankings {
     display: flex;
     flex-direction: row;
@@ -401,9 +494,7 @@ img {
     font-size: 22px;
     color: red;
     font-weight: bold;
-    font-family: 'Fredoka One', 'Comic Sans MS', cursive;
     -webkit-text-stroke: 2px white;
-    /* Chrome, Edge, Safari */
 
 
 }
@@ -514,11 +605,9 @@ img {
     gap: 30px;
     justify-items: center;
     justify-content: center;
-    /* <— centers the grid horizontally */
     align-items: start;
     max-width: 1100px;
     margin: 0 auto;
-    /* <— centers the entire grid in the page */
     padding: 40px 0;
 }
 
@@ -557,11 +646,9 @@ img {
     gap: 30px;
     justify-items: center;
     justify-content: center;
-    /* <— centers the grid horizontally */
     align-items: start;
     max-width: 1100px;
     margin: 0 auto;
-    /* <— centers the entire grid in the page */
     padding: 40px 0;
 }
 
