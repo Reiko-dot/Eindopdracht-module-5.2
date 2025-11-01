@@ -8,15 +8,16 @@ Version: 1.0
 */
 
 /* Reset default spacing and scrollbars */
-html, body {
-    margin: 0 !important; 
+html,
+body {
+    margin: 0 !important;
     padding: 0;
 
 }
 
 
 
-body > *:first-child {
+body>*:first-child {
     margin-top: 0;
     padding-top: 0;
 }
@@ -266,15 +267,15 @@ img {
 
 .what-is-sanrio {
     display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-  width: 700px;
-  margin: 0 auto; 
-  padding: 50px 20px;
-  text-align: center;
-  font-size: 20px;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 20px;
+
 }
 
 .what-is-sanrio img {
@@ -308,80 +309,286 @@ img {
 
 /* Character grid */
 .characters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center   ;
-  gap: 10px;
-  padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 20px;
 }
 
 .characters-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center; /* center each card */
-  padding: 40px 60px;
-  max-width: 1200px;
-  margin: 0 auto; /* center the whole grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    /* center each card */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* center the whole grid */
 }
 
 .character-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 220px;
+    margin-bottom: 10px;
 }
 
 .character-image img {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 4px solid #71a4fc;
 }
 
 .character-image img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* Modal background (hidden by default) */
 .character-modal {
-  display: none; /* hidden initially */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
+    display: none;
+    /* hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
 }
 
 /* The content box */
 .character-modal-content {
-  background: #fff;
-  border-radius: 12px;
-  padding: 30px;
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  animation: fadeInUp 0.3s ease;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.3s ease;
 }
 
 /* Animation */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.sanrio-rankings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 22px;
+    color: red;
+    font-weight: bold;
+    font-family: 'Fredoka One', 'Comic Sans MS', cursive;
+    -webkit-text-stroke: 2px white;
+    /* Chrome, Edge, Safari */
+
+
+}
+
+.rankings {
+    background-color: rgb(245, 243, 241);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+
+
+
+}
+
+
+.rankings-top-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    justify-content: center;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
 
 
+.ranking-card {
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 
+}
+
+.ranking-card:hover {
+    transform: scale(1.05);
+
+}
+
+.ranking-image img {
+    width: 450px;
+    height: auto;
+
+}
+
+.ranking-card h3 {
+    font-family: 'Fredoka One', 'Baloo 2', 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+
+
+}
+
+
+.rankings-2-row-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+    justify-content: center;
+    /* <— centers the grid horizontally */
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* <— centers the entire grid in the page */
+    padding: 40px 0;
+}
+
+
+
+.ranking-card {
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.ranking-card:hover {
+    transform: scale(1.05);
+
+}
+
+.ranking-image-row-2 img {
+    width: 300px;
+    height: auto;
+
+}
+
+.ranking-card h3 {
+    font-size: 18px;
+    color: rgb(45, 113, 186);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.rankings-row-3-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    justify-content: center;
+    /* <— centers the grid horizontally */
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* <— centers the entire grid in the page */
+    padding: 40px 0;
+}
+
+
+
+.ranking-card {
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.ranking-card:hover {
+    transform: scale(1.05);
+
+}
+
+.ranking-image-row-3 img {
+    width: 300px;
+    height: auto;
+
+}
+
+.ranking-card h3 {
+    font-size: 18px;
+    color: rgb(45, 113, 186);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.rankings-4-row-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    justify-items: center;
+    justify-content: center;
+    /* <— centers the grid horizontally */
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* <— centers the entire grid in the page */
+    padding: 40px 0;
+}
+
+
+
+.ranking-card {
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.ranking-card:hover {
+    transform: scale(1.05);
+
+}
+
+.ranking-image-row-4 img {
+    width: 250px;
+    height: auto;
+
+}
+
+.ranking-card h3 {
+    font-size: 18px;
+    color: rgb(45, 113, 186);
+    font-weight: bold;
+    margin-top: 10px;
+}

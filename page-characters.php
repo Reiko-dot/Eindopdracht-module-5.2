@@ -243,7 +243,7 @@ get_header();
       <div class="character-modal">
         <div class="character-modal-content">
           <?php
-          $name_8 = get_field('name-6');
+          $name_8 = get_field('name-8');
           $character_description_8 = get_field('character-description-8');
 
           if ($name_8) {
@@ -315,6 +315,62 @@ get_header();
           }
           if ($character_description_10) {
             echo '<p>' . $character_description_10 . '</p>';
+          }
+          ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <div class="character-image">
+        <?php
+        $character_photo_11 = get_field('character-photo-11');
+        if ($character_photo_11) {
+          echo '<img src="' . $character_photo_11['url'] . '" alt="' . $character_photo_11['alt'] . '" class="character-toggle">';
+        }
+        ?>
+      </div>
+
+      
+      <div class="character-modal">
+        <div class="character-modal-content">
+          <?php
+          $name_11 = get_field('name-11');
+          $character_description_11 = get_field('character-description-11');
+
+          if ($name_10) {
+            echo '<h2>' . $name_11 . '</h2>';
+          }
+          if ($character_description_11) {
+            echo '<p>' . $character_description_11 . '<p>';
+          }
+          ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <div class="character-image">
+        <?php
+        $character_photo_12 = get_field('character-photo-12');
+        if ($character_photo_12) {
+          echo '<img src="' . $character_photo_12['url'] . '" alt="' . $character_photo_12['alt'] . '" class="character-toggle">';
+        }
+        ?>
+      </div>
+
+      
+      <div class="character-modal">
+        <div class="character-modal-content">
+          <?php
+          $name_12 = get_field('name-12');
+          $character_description_12 = get_field('character-description-12');
+
+          if ($name_12) {
+            echo '<h2>' . $name_12 . '</h2>';
+          }
+          if ($character_description_12) {
+            echo '<p>' . $character_description_12 . '</p>';
           }
           ?>
         </div>
